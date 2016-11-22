@@ -9,10 +9,14 @@ function separateByLine(str) {
   });
 }
 
-export function convert(str) {
+export function convert(str, options = {input: 'xml', output: 'vtt'}) {
   const dataArr = separateByLine(str.trim());
 
-  return xml2Vtt(dataArr);
+  if(options.input.toLowerCase() === 'xml' && options.output.toLowerCase() === 'vtt') {
+    return xml2Vtt(dataArr);
+  }
+
+  return;
 };
 
 export default {

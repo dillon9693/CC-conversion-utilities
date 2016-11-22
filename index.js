@@ -20,7 +20,7 @@ export function convert(str) {
           text = line.match(/<p .*>(.*)<\/p>/)[1];
 
     return `${begin} --> ${end}\n${text}`;
-  });
+  }).join('\n\n';
 };
 
 export default {

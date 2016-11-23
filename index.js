@@ -24,5 +24,7 @@ export function convert(str, options = {input: 'xml', output: 'vtt'}) {
 };
 
 export default {
-  convert
+  convert,
+  xml2Vtt,
+  vtt2xml
 };

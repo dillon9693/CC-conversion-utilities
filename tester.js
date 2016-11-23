@@ -7,7 +7,7 @@ const output = 'output.vtt';
 const file = fs.readFile('test.xml', 'utf8', (err, data) => {
   if(err) throw err;
 
-  var outputData = convert(data, {input: 'vtt', output: 'xml'});
+  const outputData = convert(data, {input: 'vtt', output: 'xml'});
   if(!outputData) {
     console.log('File could not be written.');
     return;
